@@ -1,6 +1,6 @@
 {
   "name": "georg",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "\"System monitoring node module\"",
   "main": "index.js",
   "directories": {
