@@ -2,6 +2,10 @@
   "name": "georg",
   "version": "0.1.0",
   "description": "\"System monitoring node module\"",
+  "engines": {
+    "node": "0.10.28",
+    "npm": "1.4.9"
+  }
   "main": "index.js",
   "directories": {
     "test": "test"
