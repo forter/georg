@@ -2,12 +2,13 @@
   "name": "georg",
   "version": "0.1.0",
   "description": "\"System monitoring node module\"",
-  
+
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
+    "riemann": "^0.4.1",
     "chai": "^1.9.1"
   },
   "devDependencies": {
