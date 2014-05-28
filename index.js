@@ -1,2 +1,2 @@
-var exceptions = require('./lib/exceptions.js');
-var latencies = require('./lib/latencies.js');
+exports.exceptions = require('./lib/exceptions.js');
+exports.latencies = require('./lib/latencies.js');
