@@ -13,8 +13,10 @@ georg reconnects with riemann if a network failure occured.
 
 Currently georg only supports sending unhandled exceptions to riemann
 
-var georg = require('georg')
-georg.ExceptionCatcher({host: 'localhost'});
+```javascript
+var georg = require('georg');
+georg.ExceptionCatcher({host: 'localhost', port: 5555});
+```
 
 
 ###Release History
