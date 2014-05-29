@@ -1,18 +1,18 @@
 {
   "name": "georg",
   "version": "0.1.0",
-  "description": "\"System monitoring node module\"",
+  "description": "\"Riemann agent to monitor nodejs and application specific metrics\"",
 
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "riemann": "^0.4.1",
-    "chai": "^1.9.1"
+    "riemann": "^0.4.1"
   },
   "devDependencies": {
-    "mocha": "^1.18.2"
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1"
   },
   "scripts": {
     "test": "mocha"
@@ -22,7 +22,7 @@
     "url": "https://github.com/Ryzyco/georg.git"
   },
   "author": "Yaniv Nikankin",
-  "license": "ISC",
+  "license": "Apache 2",
   "bugs": {
     "url": "https://github.com/Ryzyco/georg/issues"
   },
