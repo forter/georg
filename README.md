@@ -15,7 +15,7 @@ Currently georg only supports sending unhandled exceptions to riemann
 
 ```javascript
 var georg = require('georg');
-georg.ExceptionCatcher({host: 'localhost', port: 5555});
+georg.exceptionCatcher({host: 'localhost', port: 5555});
 ```
 
 
