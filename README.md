@@ -21,4 +21,5 @@ georg.exceptionCatcher({host: 'localhost', port: 5555});
 
 ###Release History
 
+* 0.1.1 Minor bug fixes, added license, seperation of riemann connection and the rest of the code.
 * 0.1.0 Initial release. Support unhandled exceptions and reconnect.
