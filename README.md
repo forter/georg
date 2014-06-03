@@ -20,16 +20,8 @@ var georg = require('georg');
 georg.exceptions.catchExceptions({host: 'localhost', port: 5555});
 ```
 
-## Latencies ##
-georg supports tracking of service latencies.
-
-```javascript
-var georg = require('georg');
-georg.latencies.latencyRecorder({host: 'localhost', port: 5555});
-
-georg.latencies.recordLatency({serviceName: 'name', serviceLatencyMS: 1000}) 
 
 ###Release History
 
-* 0.2.0 Additional Latencies support. 
+* 0.1.3 Current release. Bug fixes, exception stack trace added, etc.
 * 0.1.0 Initial release. Support unhandled exceptions and reconnect.
