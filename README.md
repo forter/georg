@@ -7,9 +7,6 @@ Riemann (riemann.io) is a monitoring event hub, that can process event streams a
 
 
 
-### Auto-reconnect ###
-georg reconnects with riemann if a network failure occured.
-
 ## Unhandled Exceptions ##
 
 georg supports detection of unhandled exceptions and sending them to riemann.
@@ -28,6 +25,9 @@ georg.latencies.startRecorder({host: 'localhost', port: 5555});
 ...
 georg.latencies.recordLatency({name: "myService", type: "API", latencyMS : 400, completed: true});
 ```
+
+### Additional Features ###
+* georg auto-reconnects with riemann if a network failure occured.
 
 ###Release History
 
