@@ -6,30 +6,36 @@ The library can send nodejs specific and application specific metrics to riemann
 Riemann (riemann.io) is a monitoring event hub, that can process event streams and forward to various data stores and visualization products.
 
 
+## Installation ##
+```bash
+npm install georg
+```
 
-## Unhandled Exceptions ##
+## Initialization ##
+georg must be initialized once in the code, and it receives a list of strings, each representing a feature to be activated,
+and it receives a configuration object for the riemann connection.
 
+```javascript
+var georg = require('georg');
+georg.init(['exceptions', 'latencies'], {host: '127.0.0.1', port: 5555});
+```
+
+### Unhandled Exceptions ###
 georg supports detection of unhandled exceptions and sending them to riemann.
+The feature string is 'exceptions'.
 
+### Latency Recording ###
+georg supports recording service latencies and monitoring them via riemann.
+The feature string is 'latencies'.
+Record each latency using the recordLatency method:
 ```javascript
-var georg = require('georg');
-georg.exceptions.catchExceptions({host: 'localhost', port: 5555});
-```
-## Latency Recording ##
-
-georg supports recording service latencies and sending them to riemann. riemann receives the events and sends an alert in case the latencies cross a threshold.
-
-```javascript
-var georg = require('georg');
-georg.latencies.startRecorder({host: 'localhost', port: 5555});
-...
-georg.latencies.recordLatency({name: "myService", type: "API", latencyMS : 400, completed: true});
+georg.recordLatency({name: 'serviceName', latencyMS: 1000, error: err});
 ```
 
-### Additional Features ###
-* georg auto-reconnects with riemann if a network failure occured.
+#### Additional Features ####
+* georg auto-reconnects with riemann if a network failure occurred.
 
-###Release History
+#### Release History ####
 
 * 0.2.0 Upcoming release. Added latency recording feature, minor bug fixes.
 * 0.1.3 Current release. Bug fixes, exception stack trace added, etc.
