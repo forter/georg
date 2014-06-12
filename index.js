@@ -13,10 +13,23 @@ exports.init = function(featureArray, config) {
     //Call the starter methods for each feature in the feature array
     //and export all needed functions for each feature
     //TODO: FIND A BETTER WAY TO DO THIS, PERHAPS USING A MAP{string, function}
-    if(featureArray.indexOf('exceptions') > -1) {
+    if (featureArray.indexOf('exceptions') > -1) {
         exceptions.catchExceptions(config.service);
     }
-    if(featureArray.indexOf('latencies') > -1 ) {
+    if (featureArray.indexOf('latencies') > -1) {
         exports.recordLatency = latencies.recordLatency;
     }
 };
+
+
+
+/*TODO: THE MAP(string, function) code will look like this -
+ var a = {};
+ a["exceptions"] = function() { console.log("EXCEPTIONS")};
+ a["latencies"] = function() { console.log("LATENCIES")};
+
+ var flist = ['exceptions', 'latencies'];
+
+ for(var f in flist)
+ a[flist[f]]();
+ */

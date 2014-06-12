@@ -13,7 +13,7 @@ npm install georg
 
 ## Initialization ##
 georg must be initialized once in the code, and it receives a list of strings, each representing a feature to be activated,
-and it receives a configuration object for the riemann connection.
+and a configuration object for the riemann connection.
 
 ```javascript
 var georg = require('georg');
