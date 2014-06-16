@@ -1,6 +1,6 @@
 {
   "name": "georg",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "description": "\"Riemann agent to monitor nodejs and application specific metrics\"",
 
   "main": "index.js",
