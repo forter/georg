@@ -37,6 +37,5 @@ georg.recordLatency({name: 'serviceName', latencyMS: 1000, error: err});
 
 #### Release History ####
 
-* 0.2.0 Upcoming release. Added latency recording feature, minor bug fixes.
-* 0.1.3 Current release. Bug fixes, exception stack trace added, etc.
+* 0.2.0 Current release. Added latency recording feature, changed initialization method.
 * 0.1.0 Initial release. Support unhandled exceptions and reconnect.
