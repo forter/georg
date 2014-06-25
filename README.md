@@ -36,6 +36,6 @@ georg.recordLatency({name: 'serviceName', latencyMS: 1000, error: err});
 * georg auto-reconnects with riemann if a network failure occurred.
 
 #### Release History ####
-* 0.2.1 Current Release. Changed feature string list to feature boolean parameters.
+* 0.2.2 Current Release. Changed feature string list to feature boolean parameters.
 * 0.2.0 Added latency recording feature, minor bug fixes.
 * 0.1.0 Initial release. Support unhandled exceptions and reconnect.
