@@ -17,7 +17,7 @@ and a list of boolean variables, each representing a feature to be activated.
 
 ```javascript
 var georg = require('georg');
-georg.init({host: '127.0.0.1', port: 5555, execptions: true, latencies: true});
+georg.init({host: '127.0.0.1', port: 5555, execptions: {killTimeoutMS: 1000, logger: loggingFunction}, latencies: {}});
 ```
 
 ### Unhandled Exceptions ###
@@ -38,6 +38,7 @@ georg.endLatency(x);
 * georg auto-reconnects with riemann if a network failure occurred.
 
 #### Release History ####
+* 0.2.6 Upcoming Release. Changed feature booleans to feature JSONs for extended configuration.
 * 0.2.5 Current Release. Bug fixes, changed latency recording API to start and end.
 * 0.2.0 Added latency recording feature, minor bug fixes.
 * 0.1.0 Initial release. Support unhandled exceptions and reconnect.
