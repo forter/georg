@@ -34,6 +34,8 @@ longLatencyFunction();
 georg.endLatency(x);
 ```
 
+[riemann.config includes an example of triggering an alert based on time window statistics of latency events](riemann.config#L17)
+
 #### Additional Features ####
 * georg auto-reconnects with riemann if a network failure occurred.
 
