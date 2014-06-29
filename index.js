@@ -17,7 +17,8 @@ define([], function() {
             exceptions.catchExceptions(config.service);
         }
         if (config.latencies) {
-            exports.recordLatency = latencies.recordLatency;
+            exports.startLatency = latencies.startLatency;
+            exports.endLatency = latencies.endLatency;
         }
     };
 
