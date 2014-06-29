@@ -27,15 +27,17 @@ The feature variable name is 'exceptions'.
 ### Latency Recording ###
 georg supports recording service latencies and monitoring them via riemann.
 The feature variable name is 'latencies'.
-Record each latency using the recordLatency method:
+Record each latency using the startLatency and endLatency method:
 ```javascript
-georg.recordLatency({name: 'serviceName', latencyMS: 1000, error: err});
+var x = georg.startLatency();
+longLatencyFunction();
+georg.endLatency(x);
 ```
 
 #### Additional Features ####
 * georg auto-reconnects with riemann if a network failure occurred.
 
 #### Release History ####
-* 0.2.2 Current Release. Changed feature string list to feature boolean parameters.
+* 0.2.5 Current Release. Bug fixes, changed latency recording API to start and end.
 * 0.2.0 Added latency recording feature, minor bug fixes.
 * 0.1.0 Initial release. Support unhandled exceptions and reconnect.

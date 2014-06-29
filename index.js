@@ -5,9 +5,11 @@ define([], function() {
         latencies = require('./lib/latencies.js'),
         connection = require('./lib/riemannConnection.js');
 
+    var exportsObj = {init : init};
+
     ///This method should be called once, at one point in the code, after require('georg');
     ///It receives a configuration object, containing the riemann server details (IP, port) and boolean feature variables.
-    init = function(config) {
+    function init(config) {
         //Connect To Riemann
         connection.connectToRiemann(config);
 
@@ -17,12 +19,10 @@ define([], function() {
             exceptions.catchExceptions(config.service);
         }
         if (config.latencies) {
-            exports.startLatency = latencies.startLatency;
-            exports.endLatency = latencies.endLatency;
+            exportsObj.startLatency = latencies.startLatency;
+            exportsObj.endLatency = latencies.endLatency;
         }
     };
 
-    return {
-        init : init
-    }
+    return exportsObj;
 });
