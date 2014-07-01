@@ -17,12 +17,12 @@ and a list of boolean variables, each representing a feature to be activated.
 
 ```javascript
 var georg = require('georg');
-georg.init({host: '127.0.0.1', port: 5555, execptions: {killTimeoutMS: 1000, logger: loggingFunction}, latencies: {}});
+georg.init({host: '127.0.0.1', port: 5555, execptions: { killTimeoutMS: 1000, logger: loggingFunction}, latencies: {}});
 ```
 
 ### Unhandled Exceptions ###
 georg supports detection of unhandled exceptions and sending them to riemann.
-The feature variable name is 'exceptions'.
+The JSON contains a kill timeout and a logging function (which receives an exception and logs it).
 
 ### Latency Recording ###
 georg supports recording service latencies and monitoring them via riemann.
