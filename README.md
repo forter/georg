@@ -40,7 +40,6 @@ riemann.config includes an [example of triggering an alert](riemann.config#L17) 
 * georg auto-reconnects with riemann if a network failure occurred.
 
 #### Release History ####
-* 0.2.6 Upcoming Release. Changed feature booleans to feature JSONs for extended configuration.
-* 0.2.5 Current Release. Bug fixes, changed latency recording API to start and end.
+* 0.2.6 Current Release. Added extended configuring possibilities to exception handling.
 * 0.2.0 Added latency recording feature, minor bug fixes.
-* 0.1.0 Initial release. Support unhandled exceptions and reconnect.
+* 0.1.0 Support unhandled exceptions and reconnect.
