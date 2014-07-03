@@ -29,7 +29,7 @@ georg supports recording service latencies and monitoring them via riemann.
 The feature variable name is 'latencies'.
 Record each latency using the startLatency and endLatency method:
 ```javascript
-var x = georg.startLatency();
+var x = georg.startLatency(serviceName);
 longLatencyFunction();
 georg.endLatency(x);
 ```
