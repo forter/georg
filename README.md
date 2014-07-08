@@ -22,7 +22,7 @@ georg.init({host: '127.0.0.1', port: 5555, execptions: { killTimeoutMS: 1000, lo
 
 ### Unhandled Exceptions ###
 georg supports detection of unhandled exceptions and sending them to riemann.
-The JSON contains a kill timeout and a logging function (which receives an exception and logs it).
+The JSON contains a kill timeout and a logging function (which receives an exception and a callback. the function logs the exception and calls the callback).
 
 ### Latency Recording ###
 georg supports recording service latencies and monitoring them via riemann.
@@ -40,6 +40,7 @@ riemann.config includes an [example of triggering an alert](riemann.config#L17) 
 * georg auto-reconnects with riemann if a network failure occurred.
 
 #### Release History ####
-* 0.2.6 Current Release. Added extended configuring possibilities to exception handling.
+* 0.2.7 Current Release. Added extended configuring possibilities to exception handling.
 * 0.2.0 Added latency recording feature, minor bug fixes.
 * 0.1.0 Support unhandled exceptions and reconnect.
+
