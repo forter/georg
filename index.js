@@ -4,18 +4,18 @@ var exceptions = require('./lib/exceptions.js'),
 
 
 ///This method should be called once, at one point in the code, after require('georg');
-///featureList is an array of strings, each representing a feature, i.e. - ['exceptions', 'latencies'].
-///config is a configuration object for the riemann connection, i.e. - {host: '127.0.0.1', port: 5555, service: 'brainA'}.
-exports.init = function(featureArray, config) {
+///It receives a configuration object, containing the riemann server details (IP, port) and feature JSONs.
+exports.init = function(config) {
     //Connect To Riemann
     connection.connectToRiemann(config);
 
     //Call the starter methods for each feature in the feature array
     //and export all needed functions for each feature
-    if (featureArray.indexOf('exceptions') > -1) {
-        exceptions.catchExceptions(config.service);
+    if (!!config.exceptions) {
+        exceptions.catchExceptions(config.exceptions, config.service);
     }
-    if (featureArray.indexOf('latencies') > -1) {
-        exports.recordLatency = latencies.recordLatency;
+    if (config.latencies) {
+        exports.startLatency = latencies.startLatency;
+        exports.endLatency = latencies.endLatency;
     }
 };
