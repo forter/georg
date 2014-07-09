@@ -17,7 +17,22 @@ and a list of boolean variables, each representing a feature to be activated.
 
 ```javascript
 var georg = require('georg');
-georg.init({host: '127.0.0.1', port: 5555, execptions: { killTimeoutMS: 1000, logger: loggingFunction}, latencies: {}});
+georg.init({
+  
+  host: '127.0.0.1',
+  port: 5555,
+  
+  service: "my-service-name",
+  
+  execptions: {
+    killTimeoutMS: 1000,
+    //optional logger for integration with winston logging framework
+    logger: function(err,done) { 
+      logger.error("Unhandled exception: %s", err.stack, done);
+  },
+  
+  latencies: {}
+});
 ```
 
 ### Unhandled Exceptions ###
