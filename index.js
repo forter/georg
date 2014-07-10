@@ -15,6 +15,7 @@ exports.init = function(config) {
         exceptions.catchExceptions(config.exceptions, config.service);
     }
     if (config.latencies) {
+        latencies.servicePrefix = config.service;
         exports.startLatency = latencies.startLatency;
         exports.endLatency = latencies.endLatency;
     }
