@@ -24,13 +24,13 @@ georg.init({
   
   service: "my-service-name",
   
-  execptions: {
+  exceptions: {
     killTimeoutMS: 1000,
     //optional logger for integration with winston logging framework
     logger: function(err,done) { 
       logger.error("Unhandled exception: %s", err.stack, done);
+    }
   },
-  
   latencies: {}
 });
 ```
