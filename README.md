@@ -30,6 +30,10 @@ georg.init({
     logger: function(err,done) { 
       logger.error("Unhandled exception: %s", err.stack, done);
     }
+    //optional function to suppress exception-exit, exception-log and exception-sendToRiemann. You can use any of the functions.
+    suppressor : function(ex) {
+        return new georg.Suppressor().suppressLog().suppressExit().suppressRiemann();
+    }
   },
   latencies: {}
 });
@@ -37,7 +41,8 @@ georg.init({
 
 ### Unhandled Exceptions ###
 georg supports detection of unhandled exceptions and sending them to riemann.
-The JSON contains a kill timeout and a logging function (which receives an exception and a callback. the function logs the exception and calls the callback).
+The JSON contains a kill timeout, a logging function (which receives an exception and a callback. the function logs the exception and calls the callback),
+and a suppress function ( which receives an exception, and returns a
 
 ### Latency Recording ###
 georg supports recording service latencies and monitoring them via riemann.

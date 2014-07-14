@@ -1,7 +1,7 @@
 var exceptions = require('./lib/exceptions.js'),
     latencies = require('./lib/latencies.js'),
     connection = require('./lib/riemannConnection.js'),
-    suppress = require('./suppress.js');
+    suppress = require('./lib/suppress.js');
 
 
 ///This method should be called once, at one point in the code, after require('georg');
