@@ -54,6 +54,8 @@ longLatencyFunction();
 georg.endLatency(x);
 ```
 
+riemann.config includes an [example of triggering an alert](riemann.config#L17) based on statistics of latency events and latency threshold
+
 ### Custom Events ###
 georg supports sending custom events to riemann.
 The feature variable name id 'events'
@@ -67,8 +69,6 @@ georg.sendEvent({
     metric: 0
     tags: ['critical', 'availability']})
 ```
-
-riemann.config includes an [example of triggering an alert](riemann.config#L17) based on statistics of latency events and latency threshold
 
 #### Additional Features ####
 * georg auto-reconnects with riemann if a network failure occurred.
