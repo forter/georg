@@ -54,6 +54,18 @@ longLatencyFunction();
 georg.endLatency(x);
 ```
 
+### Latency Recording ###
+georg supports sending custom events to riemann.
+The feature variable name id 'events'
+Send an event using the sendEvent method:
+```javascript
+georg.init({service: "worker-manager-instance"});
+georg.sendEvent({
+    description: 'number of workers in the system'
+    metric: 0
+    tags: ['critical', 'availability']})
+```
+
 riemann.config includes an [example of triggering an alert](riemann.config#L17) based on statistics of latency events and latency threshold
 
 #### Additional Features ####
