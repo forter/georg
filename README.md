@@ -54,12 +54,14 @@ longLatencyFunction();
 georg.endLatency(x);
 ```
 
-### Latency Recording ###
+### Custom Events ###
 georg supports sending custom events to riemann.
 The feature variable name id 'events'
 Send an event using the sendEvent method:
 ```javascript
-georg.init({service: "worker-manager-instance"});
+georg.init({service: "worker-manager-instance",
+    host: "127.0.0.1",
+    port: 5555});
 georg.sendEvent({
     description: 'number of workers in the system'
     metric: 0
