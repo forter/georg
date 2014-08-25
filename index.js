@@ -1,7 +1,8 @@
 var exceptions = require('./lib/exceptions.js'),
     latencies = require('./lib/latencies.js'),
     connection = require('./lib/riemannConnection.js'),
-    suppress = require('./lib/suppress.js');
+    suppress = require('./lib/suppress.js'),
+    events = require('./lib/events.js');
 
 
 ///This method should be called once, at one point in the code, after require('georg');
@@ -21,4 +22,9 @@ exports.init = function(config) {
         exports.startLatency = latencies.startLatency;
         exports.endLatency = latencies.endLatency;
     }
+
+    events.setMachineName(config.service);
+    exports.sendEvent = events.sendEvent;
 };
+
+

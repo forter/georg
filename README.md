@@ -56,6 +56,20 @@ georg.endLatency(x);
 
 riemann.config includes an [example of triggering an alert](riemann.config#L17) based on statistics of latency events and latency threshold
 
+### Custom Events ###
+georg supports sending custom events to riemann.
+The feature variable name id 'events'
+Send an event using the sendEvent method:
+```javascript
+georg.init({service: "worker-manager-instance",
+    host: "127.0.0.1",
+    port: 5555});
+georg.sendEvent({
+    description: 'number of workers in the system'
+    metric: 0
+    tags: ['critical', 'availability']})
+```
+
 #### Additional Features ####
 * georg auto-reconnects with riemann if a network failure occurred.
 
