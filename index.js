@@ -17,6 +17,10 @@ exports.init = function(config) {
         exports.Suppressor = suppress.Suppressor;
         exceptions.catchExceptions(config.exceptions, config.service);
     }
+
+    exceptions.servicePrefix = config.service;
+    exports.sendUnexpectedException = exceptions.sendUnexpectedException;
+
     if (config.latencies) {
         latencies.servicePrefix = config.service;
         exports.startLatency = latencies.startLatency;
