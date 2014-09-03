@@ -1,7 +1,3 @@
-/**
- * Created by anya on 9/3/14.
- */
-
 
 var utils = require('../lib/utils.js');
 var should = require('chai').should();
