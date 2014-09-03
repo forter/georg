@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "riemann": "^0.4.1",
+    "riemann": "git://github.com/perezd/riemann-nodejs-client.git#830e5533b01429a38af65587c47634cdddf0bf91",
     "chai": "^1.9.1"
   },
   "devDependencies": {
