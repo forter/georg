@@ -11,15 +11,13 @@ exports.init = function(config) {
     //Connect To Riemann
     connection.connectToRiemann(config);
 
-    //Call the starter methods for each feature in the feature array
-    //and export all needed functions for each feature
-    if (!!config.exceptions) {
-        exports.Suppressor = suppress.Suppressor;
-        exceptions.catchExceptions(config.exceptions, config.service);
-    }
-
     exceptions.servicePrefix = config.service;
     exports.sendUnexpectedException = exceptions.sendUnexpectedException;
+
+    if (!!config.exceptions) {
+        exports.Suppressor = suppress.Suppressor;
+        exceptions.catchExceptions(config.exceptions);
+    }
 
     if (config.latencies) {
         latencies.servicePrefix = config.service;
