@@ -74,7 +74,7 @@ georg.sendEvent({
 * georg auto-reconnects with riemann if a network failure occurred.
 
 #### Release History ####
-* 0.2.9 Current Release. Added suppress capabilities for exception catching and fixed bugs.
-* 0.2.0 Added latency recording feature, minor bug fixes.
-* 0.1.0 Support unhandled exceptions and reconnect.
+* 0.2.15 Current Version. Added custom attributes sending.
+* 0.2.0  Added latency recording feature, minor bug fixes.
+* 0.1.0  Support unhandled exceptions and reconnect.
 
