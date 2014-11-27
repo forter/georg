@@ -34,3 +34,10 @@ describe('Check join objects', function() {
         obj2.should.be.jsonOf({"bar": 2});
     })
 })
+
+describe('Test getAllAttributesRiemannFormat', function() {
+    var mandatoryAtts = {"foo": "bar", "baz": 2};
+    it('should return given attributes + mandatory attributes in riemann format', function() {
+
+    })
+})
