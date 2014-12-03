@@ -9,8 +9,7 @@
   "dependencies": {
     "riemann": "git://github.com/perezd/riemann-nodejs-client.git#830e5533b01429a38af65587c47634cdddf0bf91",
     "chai": "^1.9.1",
-    "underscore": "^1.7.0",
-    "chai-fuzzy": "^1.4.0"
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "mocha": "^1.18.2",

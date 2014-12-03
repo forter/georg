@@ -3,7 +3,6 @@ var utils = require('../lib/utils.js');
 var mandatoryAttributes = require('../lib/mandatoryAttributes');
 var chai = require('chai');
 var should = chai.should();
-chai.use(require('chai-fuzzy'));
 
 describe('Check convert json to riemann format', function() {
     it('for json should return list of key value pairs', function() {
