@@ -1,6 +1,6 @@
 {
   "name": "georg",
-  "version": "0.2.22",
+  "version": "0.2.23",
   "description": "\"Riemann agent to monitor nodejs and application specific metrics\"",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,8 @@
   "dependencies": {
     "riemann": "^0.4.3",
     "chai": "^1.9.1",
-    "underscore": "^1.7.0"
+    "underscore": "^1.7.0",
+    "ip": "^0.3.2"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
