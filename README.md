@@ -51,7 +51,7 @@ Record each latency using the startLatency and endLatency method:
 ```javascript
 var x = georg.startLatency(serviceName);
 longLatencyFunction();
-georg.endLatency(x);
+var latency = georg.endLatency(x);
 ```
 
 riemann.config includes an [example of triggering an alert](riemann.config#L17) based on statistics of latency events and latency threshold
@@ -74,6 +74,7 @@ georg.sendEvent({
 * georg auto-reconnects with riemann if a network failure occurred.
 
 #### Release History ####
+* 0.2.30 Return latency from endLatency method
 * 0.2.16 Changed reporting of 'unexpected-exception' to 'exception'
 * 0.2.15 Current Version. Added custom attributes sending.
 * 0.2.0  Added latency recording feature, minor bug fixes.
