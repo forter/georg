@@ -39,8 +39,8 @@ function init (config) {
 function disconnect () {
     connection.disconnect();
     exports.init = init;
-    ["disconnect", "sendEvent", "startLatency", "endLatency", "Suppressor", "sendUnexpectedException"].forEach(function(method) {
-        if (!! exports[method]) {
+    Object.keys(exports).forEach(function(method) {
+        if (method !== "init") {
             delete(exports[method]);
         }
     });
