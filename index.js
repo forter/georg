@@ -32,11 +32,11 @@ function init (config) {
 
     events.setMachineName(config.service);
     exports.sendEvent = events.sendEvent;
-    exports.disconnect = disconnect;
+    exports.destroy = destroy;
 };
 
 
-function disconnect () {
+function destroy () {
     connection.disconnect();
     exports.init = init;
     Object.keys(exports).forEach(function(method) {
