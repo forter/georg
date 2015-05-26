@@ -8,7 +8,7 @@ var exceptions = require('./lib/exceptions.js'),
 
 ///This method should be called once, at one point in the code, after require('georg');
 ///It receives a configuration object, containing the riemann server details (IP, port) and feature JSONs.
-exports.init = function(config) {
+function init (config) {
     //Connect To Riemann
     connection.connectToRiemann(config);
 
@@ -32,6 +32,19 @@ exports.init = function(config) {
 
     events.setMachineName(config.service);
     exports.sendEvent = events.sendEvent;
+    exports.disconnect = disconnect;
 };
 
 
+function disconnect () {
+    connection.disconnect();
+    exports.init = init;
+    ["disconnect", "sendEvent", "startLatency", "endLatency", "Suppressor", "sendUnexpectedException"].forEach(function(method) {
+        if (!! exports[method]) {
+            delete(exports[method]);
+        }
+    });
+};
+
+
+exports.init = init;
