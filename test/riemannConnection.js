@@ -32,7 +32,7 @@ describe('Test for maximum delay of a reconnection retry time', function() {
 
     it('1. first attempt suppose to be lower then 1000', function() {
         reconnectTimeoutMS = riemannConnection.getReconnectTimeoutMS(reconnectTimeoutMS, 1, maxRetryDelayMS-1);
-        reconnectTimeoutMS.should.be.below(maxRetryDelayMS);
+        reconnectTimeoutMS.should.equal(0);
     });
 
 
