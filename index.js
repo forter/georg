@@ -23,6 +23,7 @@ exports.init = function(config) {
     if (config.latencies) {
         latencies.servicePrefix = config.service;
         exports.startLatency = latencies.startLatency;
+        exports.checkpointLatency = latencies.checkpointLatency;
         exports.endLatency = latencies.endLatency;
     }
 

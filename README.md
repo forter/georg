@@ -51,6 +51,8 @@ Record each latency using the startLatency and endLatency method:
 ```javascript
 var x = georg.startLatency(serviceName);
 longLatencyFunction();
+x.checkpointLatency(x, "afterFirstFunctionLatency")
+longLatencyFunction();
 var latency = georg.endLatency(x);
 ```
 
