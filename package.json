@@ -1,6 +1,6 @@
 {
-  "name": "georg",
-  "version": "0.3.0",
+  "name": "@forter/georg",
+  "version": "0.1.0",
   "description": "\"Riemann agent to monitor nodejs and application specific metrics\"",
   "main": "index.js",
   "directories": {
@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ryzyco/georg.git"
+    "url": "https://github.com/forter/georg.git"
   },
   "author": "Yaniv Nikankin",
   "license": "Apache 2",
   "bugs": {
-    "url": "https://github.com/Ryzyco/georg/issues"
+    "url": "https://github.com/forter/georg/issues"
   },
-  "homepage": "https://github.com/Ryzyco/georg"
+  "homepage": "https://github.com/forter/georg"
 }
