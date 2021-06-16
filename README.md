@@ -82,3 +82,4 @@ georg.sendEvent({
 * 0.2.0  Added latency recording feature, minor bug fixes.
 * 0.1.0  Support unhandled exceptions and reconnect.
 
+
